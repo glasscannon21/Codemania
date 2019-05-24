@@ -16,25 +16,20 @@ function getComputerChoice(){
 
 function win(a,b){
 	userScore++;
-	userScore_span.innerHTML = userScore;
-	computerScore_span.innerHTML = computerScore;
+	console.log("win");
 
 }
 
-function lose(){
+function lose(a,b){
+	computerScore++;
+	console.log("lose");
 
 }
 
-function draw(){
+function draw(a,b){
+	console.log("draw");
 
 }
-
-
-
-
-
-
-
 
 function game(userChoice)
 {
@@ -48,12 +43,12 @@ function game(userChoice)
 		case "ps":
 		case "rp":
 		case "sr":
-			lose();
+			lose(userChoice, computerChoice);
 			break;
 		case "ss":
 		case "pp":
 		case "rr":
-			draw();
+			draw(userChoice, computerChoice);
 			break;
 	}
 }
