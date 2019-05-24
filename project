@@ -14,5 +14,23 @@
 	<div id="computer-label" class="badge">comp</div>
 	<spanid="user-score">0</span>:<spanid="computer-score">0</span>
  </div>
+ 
+ <div class="result">
+	<p>Paper covers Rock, you win!</p>
+</div>
+
+<div class="choices">
+		<div class="choice" id="r">
+			<img src="images/rock.png" alt="" height="42" width="42">
+		</div>
+		<div class="choice" id="p">
+			<img src="images/paper.png" alt="" height="42" width="42">
+		</div>
+		<div class="choice" id="s">
+			<img src="images/scissors.png" alt="" height="42" width="42">
+		</div>
+	</div>
+<p id="action-message">Make your move.</p>
+<script src="app.js" charset="utf-8"></script>
 </body>
 </html>
