@@ -10,8 +10,8 @@ import { Card } from 'react-native-paper';
 
 export default class App extends React.Component {
   render() {
-    return (
-    <View
+    return this.state.isLoading ? (
+      <View
         style={{
           flex: 1,
           backgroundColor: 'black',
@@ -20,6 +20,16 @@ export default class App extends React.Component {
         }}
       >
         <ActivityIndicator size="large" color="grey" />
+      </View>
+    ) : (
+      <View style={{ flex: 1, backgroundColor: 'black' }}>
+        <FlatList
+          horizontal
+          pagingEnabled
+          data={this.state.images}
+          renderItem={(({item})=>this.renderItem(item))}
+          keyExtractor={item => item.id}
+          />
       </View>
     );
   }
